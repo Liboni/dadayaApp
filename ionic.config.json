@@ -1,0 +1,8 @@
+{
+  "name": "dadayaApp",
+  "app_id": "eeee58f6",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
