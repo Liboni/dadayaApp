@@ -1,3 +1,7 @@
+body{
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+}
 .nav-bar{
     color: #000;
     position: absolute;
@@ -29,13 +33,44 @@
     }
 }
 
-@media only screen and (max-width: 550px) {
+.layer {
+    background-color: rgba(50, 50, 50, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.top-row{
+    background-color: green;
+     height: 50%;
+}
+.scroll-content{
+    padding: 0 !important
+}  
+h1{
+    margin-top: 1.5em !important;
+    text-align: center;
+   }
+.main-top-row{
+    background-color: green;
+     height: 79%;
+}
+h2{
+    color: #15c810;
+    font-size: 3em;
+   }
+@media only screen and (max-width: 820px) {
     .col-sm-0 {
         display: none !important;
     }
+    h2{
+        color: #15c810;
+        font-size: 2em;
+        font-family: initial;
+       }
   }
   
-  @media only screen and (min-width: 550px) {
+  @media only screen and (min-width: 820px) {
     .bar-button-default {
         display: none !important;
     }
