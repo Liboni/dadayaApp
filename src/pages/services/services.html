@@ -1,13 +1,310 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-      </ion-navbar>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-    <ion-row class="top-row">
+  <ion-row class="top-row top-image">
+    <div class="layer">
+      <h1 class="center-text main-heading">Service</h1>
+    </div>
+  </ion-row>
+  <ion-row>
+    <ion-col class="side-menu-list-col" offset-md-1 col-md-2>
+      <ul class="side-menu-list">
+        <li [class.active]="activeTab=='ACADEMICS'" (click)="tab('ACADEMICS')">
+          Academics
+        </li>
+        <li [class.active]="activeTab=='SPORTS'" (click)="tab('SPORTS')">
+          Sports
+        </li>
+        <li [class.active]="activeTab=='CULTURE'" (click)="tab('CULTURE')">
+          Clubs & Culture
+        </li>
+      </ul>
+    </ion-col>
+    <ion-col col-md-8 *ngIf="activeTab=='ACADEMICS'">
+      <ion-col offset-md-3 col-md-6>
+        <h1 class="center-text underline">Academics</h1>
+      </ion-col>
+      <ion-row col-md-12>
+        <p>Our vision as a department is to empower the pupils both academically and spiritually through integrating Biblical
+          principles into our teaching. We aim at equipping each pupil with sound knowledge and skills that will enable them
+          to solve problems as well as deal and cope with the technical aspect of their lives. It is our hope that by the
+          time pupils leave high school, they are familiar with the technological developments in their subject areas.
+        </p>
       </ion-row>
+      <ion-row col-md-12>
+        <ul class="side-menu-list-horizontal">
+          <li col-md-4 [class.active]="activeAcademicTab=='SCIENCES'" (click)="academicTab('SCIENCES')">
+            <ion-icon name="beaker" item-start></ion-icon>
+            Sciences
+          </li>
+          <li col-md-4 [class.active]="activeAcademicTab=='HUMANITIES'" (click)="academicTab('HUMANITIES')">
+            <ion-icon name="book" item-start></ion-icon>
+            Humanities
+          </li>
+          <li col-md-4 [class.active]="activeAcademicTab=='COMMERCIALS'" (click)="academicTab('COMMERCIALS')">
+            <ion-icon name="cash" item-start></ion-icon>
+            Commercials
+          </li>
+        </ul>
+        <ion-row class="academics-details" col-md-12 *ngIf="activeAcademicTab=='SCIENCES'">
+          <h2 class="underline">Overview</h2>
+          <p>
+            Dadaya High School has a vibrant and dynamic Science Department. We are very proud of the achievements of our students. Some
+            of the high lights are that in 2014 two of our students came first and second in the Science Olympiad and in
+            2015 a number came in the top ten students. WE have also achieved excellent results in the Cambridge examinations
+            with a number of top students in Zimbabwe.
+          </p>
+          <ion-card>
+          <ion-list>
+              <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="/assets/imgs/church.jpg">
+                </ion-thumbnail>
+                <h2>Sciences subjects</h2>
+                <h3><span>Form 1 & 2: </span> Maths, Science & Geography</h3>
+                <h3><span>Form 3 & 4: </span> Maths, Chemistry, Physics, Geography & Biology</h3>
+                <h3><span>Form 5 & 6: </span> Maths, Chemistry, Physics, Geography & Biology</h3>
+                <p class="highlight-p"><span>Teachers:</span> Mr Jema</p>
+              </ion-item>
+            </ion-list>
+            </ion-card>
+        </ion-row>
+        <ion-row class="academics-details" col-md-12 *ngIf="activeAcademicTab=='HUMANITIES'">
+          <h2 class="underline">Overview</h2>
+          <p>
+            The Humanities Department is one of the largest Departments at Gateway High School, with 10 teachers, of which 5 are females.
+            Our department is housed in the heart of the main quad building adjacent to the Arts Department. In most cases
+            we register between 90 to 100% pass-rate at both A and O Levels.
+          </p>
+          <br>
+          <br>
+          <p>
+            Lessons in the Humanities Department offer very much more than skills related to the subject area or the workplace. It is
+            one of the best ways of preparing students for critical citizenship in a rapidly changing world, a world that
+            demands versatility and creativity rather than mere teaching and learning. The students are also prepared for
+            university entrance especially in the following areas> the Arts, the Social Sciences and will ensure that the
+            student’s journey leads to personal growth and intellectual development that will change his/her life for the
+            better. In a nutshell, Humanities Department prepares students for university entrance and most of our products
+            in particular, occupy cutting-edge positions in industry, the media, government and virtually all sectors of
+            the economy. Our students are recognised by the world’s universities and employers.
+          </p>
+          <ion-card>
+              <ion-list>
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="/assets/imgs/church.jpg">
+                    </ion-thumbnail>
+                    <h2>Humanities subjects</h2>
+                    <h3><span>Form 1 & 2: </span> History, English, Shona & Geography </h3>
+                    <h3><span>Form 3 & 4: </span> History, English, Shona, Geography, Literature, Divinty & Biology</h3>
+                    <h3><span>Form 5 & 6: </span> History, Shona, Geography, Literature & Divinty</h3>
+                    <p class="highlight-p"><span>Teachers:</span> Mr Hma</p>
+                  </ion-item>
+                </ion-list>
+                </ion-card>
+        </ion-row>
+        <ion-row class="academics-details" col-md-12 *ngIf="activeAcademicTab=='COMMERCIALS'">
+          <h2 class="underline">Overview</h2>
+          <p>
+            Dadaya High School has a vibrant and dynamic Science Department. We are very proud of the achievements of our students. Some
+            of the high lights are that in 2014 two of our students came first and second in the Science Olympiad and in
+            2015 a number came in the top ten students. WE have also achieved excellent results in the Cambridge examinations
+            with a number of top students in Zimbabwe.
+          </p>
+          <ion-card>
+              <ion-list>
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="/assets/imgs/church.jpg">
+                    </ion-thumbnail>
+                    <h2>Commercials subjects</h2>
+                    <h3><span>Form 1 & 2: </span> Maths, Accounts, Commerce & Geography</h3>
+                    <h3><span>Form 3 & 4: </span> Maths, Accounts, Commerce, Geography & Economics</h3>
+                    <h3><span>Form 5 & 6: </span> Maths, Accounts, Commerce, Geography & Economics</h3>
+                    <p class="highlight-p"><span>Teachers:</span> Mrs Sithole</p>
+                  </ion-item>
+                </ion-list>
+                </ion-card>
+        </ion-row>
+      </ion-row>
+    </ion-col>
+    <ion-col col-md-8 *ngIf="activeTab=='SPORTS'">
+      <ion-col offset-md-3 col-md-6>
+        <h1 class="center-text underline">Sports</h1>
+      </ion-col>
+      <ion-row col-md-12>
+        <p> Sport plays a central role in the School’s endeavour to support and nurture individual pupils with diverse needs.
+          We believe sport develops pupils’ confidence and resilience through physical, technical and mental stimulation,
+          as well as exposure to teamwork and leadership opportunities.
+        </p>
+      </ion-row>
+      <ion-row col-md-12>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Boys & Girls Soccer</h3>
+              <p>2nd Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Athletics</h3>
+              <p>1st Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Basketball</h3>
+              <p>2nd Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Cross Country</h3>
+              <p>1st Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Volleyball</h3>
+              <p>2nd Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Netball</h3>
+              <p>2nd Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Tennis</h3>
+              <p>2nd Term</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+
+    <ion-col col-md-8 *ngIf="activeTab=='CULTURE'">
+      <ion-col offset-md-3 col-md-6>
+        <h1 class="center-text underline">Culture & Clubs</h1>
+      </ion-col>
+      <ion-row col-md-12>
+        <p> Dadaya High School offers a number of excellent extra-curricular opportunities. Activities are designed to supplement
+          the school curriculum and provide additional opportunities for our students to develop skills, character, and leadership.
+          Students are given the opportunity to participate in additional co-curricular activities throughout the year.
+        </p>
+      </ion-row>
+      <ion-row col-md-12>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Scripture Union</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Art & Craft</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Drama</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Chess</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Debate</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Choir</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Public Speaking</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Quiz</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <img src="assets/imgs/sample.jpg">
+            <ion-item>
+              <h3>Computer Aided Design</h3>
+              <p>Teacher</p>
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>

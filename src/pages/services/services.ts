@@ -14,12 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'services.html',
 })
 export class ServicesPage {
-
+  activeTab:String = "ACADEMICS";
+  activeAcademicTab:String = "SCIENCES";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ServicesPage');
+  tab(name){
+    this.activeTab = name;
   }
-
+  academicTab(name){
+    this.activeAcademicTab = name;
+  }
 }

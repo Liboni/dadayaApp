@@ -1,3 +1,24 @@
 page-services {
-
+    .top-image{
+        background-image: url(/assets/imgs/church.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .academics-details{
+        margin-top: 2em;
+        ion-thumbnail{
+            border: 10px solid #dedede;
+        }
+        span{
+            font-size: 17px;
+            font-weight: 500;            
+        }
+        h3{
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+        .highlight-p{
+            background-color: #dedede;
+        }
+    }
 }

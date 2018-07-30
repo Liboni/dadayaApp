@@ -14,8 +14,8 @@
         </div>
     </ion-row>
     <ion-row>
-        <ion-col class="list-col" offset-md-1 col-md-2>
-            <ul class="list">
+        <ion-col class="side-menu-list-col" offset-md-1 col-md-2>
+            <ul class="side-menu-list">
                 <li [class.active]="activeTab=='PRINCIPAL'" (click)="tab('PRINCIPAL')">
                     PRINCIPAL MESSAGE
                 </li>
@@ -30,7 +30,6 @@
                 </li>
             </ul>
         </ion-col>
-
 
         <ion-col col-md-8 *ngIf="activeTab=='PRINCIPAL'">
             <ion-col offset-md-3 col-md-6>
