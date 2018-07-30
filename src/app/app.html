@@ -15,12 +15,11 @@
 
 </ion-menu>
 <nav class="col-sm-0 nav-bar">
-  <img src="assets/imgs/logo.jpeg" class="nav-logo"/>
+        <img src="assets/imgs/logo.jpeg" class="nav-logo" (click)="homePage()"/>
   <ul class="nav-list">
     <li class="nav-item" *ngFor="let p of pages" (click)="openPage(p)">
        {{p.title}}
     </li>
   </ul>
 </nav>
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

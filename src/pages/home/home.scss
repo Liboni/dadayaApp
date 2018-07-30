@@ -3,15 +3,100 @@ page-home {
         background-image: url(/assets/imgs/dadayatodd.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        height: 65%;
        }
       
-   .center-text{
-       text-align: center;
+       .middle-image{
+        background-image: url(/assets/imgs/church.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+       }
+       .upcoming-events ion-thumbnail{
+           background-color: #095407;
+           color: white;
+           text-align: center;
+           font-size: 4vmin;
+           padding: 1em;  
+           margin-right: 0 !important;        
+       }
+       .upcoming-events-text{
+        height: 93.75px;
+        margin-top: 1px;
+        background-color: #15c8101a;
+        padding: 2em 0em 0em 1em;
+      
+       }
+       .address{
+        font-size: 20px;
+        h1{
+            padding: 0;
+        }
+       }
+       .upcoming-list{
+           width: 100%
+       }
+             
+       .footer{
+           border-top:1px solid  #dedede;
+           padding: 1em;
+       }
+       .larger-icon{
+           font-size: 36px;
+       }
+       .upcoming-events:hover{
+        ion-thumbnail{
+            background-color: #084106;
+        } 
+        .upcoming-events-text{
+            background-color: #095407;
+            h3{
+                color: white;
+               }
+           } 
+       }
+      .layer p{
+          color: white;
+          text-align: center;
+          margin-right: 10em;
+          font-size: 30px;
+          margin-top: 2em;
+          margin-left: 10em;
+          margin-bottom: 3em;         
+          small{
+              border-top: 1px solid white;
+              padding-top: 1em;
+          }
+      }     
+
+   .school-notice ion-item:hover{
+    border-left: 10px solid green;
+    border-bottom: 1px solid green;
+    width: 100%;
+    h2{
+        color: #c25b4e;
+        
+    }
    }
-  
+  .activity-row {
+    margin-left: 5em;
+    margin-right: 5em;
+   }
+   .activity-p{
+        text-align: start;
+        font-size: 15px !important;
+        margin-right: 0!important;
+        margin-left: 0!important;
+   }
+  .activity{
+    color: #343434;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0 0 11px 0;
+  }
    h3{
-    text-align: center;
-    margin: 10px 
+       margin: 10px 
    }
    .main-process-row{
     color: white;
@@ -21,27 +106,63 @@ page-home {
     padding-right: 15em;
     background-color: #000d00;
     color: white;
+    text-align: center;
    }
    .iconProcess{
     font-size: 8em;
     color: #095407;
-    padding-left: 60px;
    }
    ion-label{
     white-space: normal;
    }
    .item p{
     font-size: 2rem;
-    text-align: justify;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin-right: 5em;
     margin-left: 5em;
    }
+   @media only screen and (max-width: 1024px) {
+    .layer p{       
+        margin-right: 5em;
+        margin-left: 5em;       
+    }
+   }
+   @media only screen and (max-width: 768px) {
+    .layer p{       
+        margin-right: 3em;
+        margin-left: 3em;       
+    }
+   .process-row {
+        padding-left: 0; 
+        padding-right: 0; 
+    }
+    .row{
+        display: block;
+        padding: 1em;
+    }
+   }
+
+   @media only screen and (max-width: 425px) {
+    .layer p{       
+        margin-right: 1em;
+        margin-left: 1em;  
+        font-size: 17px;     
+    }
+    .row{
+        display: block;
+        padding: 1em;
+    }
+   }
    @media only screen and (max-width: 550px) {
+    
     .item p{
         margin-right: 0em;
         margin-left: 0em;
     }
+    .activity-row {
+        margin-left: 1em;
+        margin-right: 1em;
+       }
     h1{
         margin-top: 1em !important;
     }

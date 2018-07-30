@@ -10,41 +10,378 @@
 <ion-content padding>
     <ion-row class="top-row top-image">
         <div class="layer">
-            <h1>Overview of Dadaya Old Students Association (DOSA)</h1>
+            <h1 class="center-text main-heading">ABOUT US</h1>
         </div>
     </ion-row>
-    <h1 class="about-head">ABOUT</h1>
-    <ul class="progressBar">
-        <li class="active">
-            <div class="right">
-                <h3>Initiation</h3>
-                The styles from different types of cards can be combined to create advanced cards. Cards can also use custom CSS.
-            </div>
-        </li>
-        <li class="active">
-            <div class="left">
-                <h3>Increase Alumni Engagement</h3>The styles from different types of cards can be combined to create advanced
-                cards. Cards can also use custom CSS.</div>
-        </li>
-        <li class="active">
-            <div class="right">
-                <h3>Leadership Planning & Foresight</h3>The styles from different types of cards can be combined to create advanced
-                cards. Cards can also use custom CSS.</div>
-        </li>
-        <li class="active">
-            <div class="left">
-                <h3>Culture of Engagement</h3>The styles from different types of cards can be combined to create advanced cards.
-                Cards can also use custom CSS.</div>
-        </li>
-        <li class="active">
-            <div class="right">
-                <h3>Projects & Programs</h3>The styles from different types of cards can be combined to create advanced cards.
-                Cards can also use custom CSS.</div>
-        </li>
-        <li>
-            <div class="left">
-                <h3>IT Support Alumni Engagement</h3>The styles from different types of cards can be combined to create advanced
-                cards. Cards can also use custom CSS.</div>
-        </li>
-    </ul>
+    <ion-row>
+        <ion-col class="list-col" offset-md-1 col-md-2>
+            <ul class="list">
+                <li [class.active]="activeTab=='PRINCIPAL'" (click)="tab('PRINCIPAL')">
+                    PRINCIPAL MESSAGE
+                </li>
+                <li [class.active]="activeTab=='STRATEGIC'" (click)="tab('STRATEGIC')">
+                    STRATEGIC PLAN
+                </li>
+                <li [class.active]="activeTab=='BACKGROUND'" (click)="tab('BACKGROUND')">
+                    BACKGROUND
+                </li>
+                <li [class.active]="activeTab=='STAFF'" (click)="tab('STAFF')">
+                    STAFF DIRECTORY
+                </li>
+            </ul>
+        </ion-col>
+
+
+        <ion-col col-md-8 *ngIf="activeTab=='PRINCIPAL'">
+            <ion-col offset-md-3 col-md-6>
+                <h1 class="center-text underline">Principal Message</h1>
+            </ion-col>
+            <ion-row col-md-12>
+              <p>
+                    I’m so excited to lead a school that is a great community institution and a world-class high school in Midlands. I’ve already heard from so many parents, students, ministers and community leaders about how excited they are – and we’re going to tap into that excitement. 
+                    We are creating a new Dyett High School, which will be an open enrollment, neighborhood school that is arts focused and has a technology lab and training center. The school will open for the 2018-19 school year and have 550 students when it is fully enrolled. 
+                    <br><br>
+                    The new school concept was celebrated by a broad coalition of community groups, clergy, and elected officials representing Bronzeville and the larger south side community, and it will incorporate key themes identified by the RFP process, such as a technology hub for the larger community, and the need for fine arts programming that are consistent with the legacy of the school's namesake, Walter H. Dyett. 
+                    <br><br>
+                    CPS worked with multiple community partners to arrive at a solution that meets several needs: create an open enrollment neighborhood high school, fill the critical demand for an arts high school on the south side, produce an enrollment stream that can weather population changes, and work with education leaders to create a technology hub.
+                    <br><br>
+                    With the Selective Enrollment process underway, you can expect to see us out in the community, talking to students in the neighborhood, at the feeder schools and who have an interest in the arts. 
+                    <br><br>
+                    <br><br>
+                    I also look forward to working with the leaders on our Technical Advisory Committees, who are recognized leaders in their fields, so that that they can provide insight and guidance on what our needs will be.
+                    <br><br>
+                    I will also be holding monthly community meetings so if you have questions or feedback, you can talk with me then, or you can reach out separately and email me at bamcloyd@cps.edu.
+                    <br><br>
+                    And in the coming months, I’ll be hiring staff for the school. I’ve already heard from a number of educators who are excited and want to be a part of this school. I’ll be looking for teachers who are committed to rigor, taking our students to the next level and passionate about engaging children. 
+              </p>
+            </ion-row>
+        </ion-col>
+
+
+        <ion-col class="about-row" col-md-8 *ngIf="activeTab=='STRATEGIC'">
+            <ion-col offset-md-3 col-md-6>
+                <h1 class="center-text underline">Strategic Plan</h1>
+            </ion-col>
+            <ion-row col-md-12>
+                <h2>Vision</h2>
+                <p> Our vision at Dadaya High School is to empower students to acquire, demonstrate, articulate and value knowledge
+                    and skills that will support them, as life-long learners, to participate in and contribute to the global
+                    world and practise the core values of the school: respect, tolerance & inclusion, and excellence.
+                </p>
+            </ion-row>
+            <ion-row col-md-12>
+                <h2>Mission Statement</h2>
+                <p>(Our mission) is to seek exceptionally promising students of all backgrounds from across the nation and around
+                    the world and to educate them, through mental discipline and social experience, to develop their intellectual,
+                    moral, civic, and creative capacities to the fullest
+                </p>
+            </ion-row>
+            <ion-row col-md-12>
+                <h2>Core Values</h2>
+                <ion-row col-md-12>
+                    <ul>
+                        <li>Leading through innovation</li>
+                        <li>Excellence</li>
+                        <li>Growing by learning</li>
+                    </ul>
+                </ion-row>
+            </ion-row>
+        </ion-col>
+
+
+        <ion-col col-md-8 *ngIf="activeTab=='STAFF'">
+            <ion-col offset-md-3 col-md-6>
+                <h1 class="center-text underline">Staff Directory</h1>
+            </ion-col>
+            <ion-row col-md-12>
+                <ion-card offset-md-3 col-md-6>
+                    <img src="assets/imgs/sample.jpg">
+                    <ion-item>
+                        <h3>Mr Shumba</h3>
+                        <p>Headmaster</p>
+                        <p>
+                            <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                        <p>
+                            <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                            <a> info@dadayahigh.ac.zw</a>
+                        </p>
+                    </ion-item>
+                </ion-card>
+            </ion-row>
+            <ion-row col-md-12>
+                <ion-col offset-md-3 col-md-6>
+                    <ion-card>
+                        <img src="assets/imgs/sample.jpg">
+                        <ion-item>
+                            <h3>Mr Shumba</h3>
+                            <p>Deputy Headmaster</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                                <a> info@dadayahigh.ac.zw</a>
+                            </p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+            <ion-row col-md-12>
+                <ion-col col-md-6>
+                    <ion-card>
+                        <img src="assets/imgs/sample.jpg">
+                        <ion-item>
+                            <h3>Mr Shumba</h3>
+                            <p>Senior Master</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                                <a> info@dadayahigh.ac.zw</a>
+                            </p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-md-6>
+                    <ion-card>
+                        <img src="assets/imgs/sample.jpg">
+                        <ion-item>
+                            <h3>Mr Shumba</h3>
+                            <p>Senior Master</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                                <a> info@dadayahigh.ac.zw</a>
+                            </p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+            <ion-row col-md-12>
+                <ion-col col-md-4>
+                    <ion-card>
+                        <img src="assets/imgs/sample.jpg">
+                        <ion-item>
+                            <h3>Mr Shumba</h3>
+                            <p>Teacher</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                                <a> info@dadayahigh.ac.zw</a>
+                            </p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-md-4>
+                    <ion-card>
+                        <img src="assets/imgs/sample.jpg">
+                        <ion-item>
+                            <h3>Mr Shumba</h3>
+                            <p>Teacher</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                                <a> info@dadayahigh.ac.zw</a>
+                            </p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-md-4>
+                    <ion-card>
+                        <img src="assets/imgs/sample.jpg">
+                        <ion-item>
+                            <h3>Mr Shumba</h3>
+                            <p>Teacher</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="call"></ion-icon> 0775314089</p>
+                            <p>
+                                <ion-icon class="icon-main-color" name="mail"></ion-icon>
+                                <a> info@dadayahigh.ac.zw</a>
+                            </p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+        <ion-col col-md-8 *ngIf="activeTab=='BACKGROUND'">
+            <ion-col offset-md-3 col-md-6>
+                <h1 class="center-text underline">Background</h1>
+            </ion-col>
+            <ion-col offset-md-2 col-md-8>
+                <ul class="timeline">
+                    <li>
+                        <div class="tldate"> 1950</div>
+                    </li>
+                    <li>
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Surprising Headline Right Here</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 3 hours ago</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Lorem Ipsum and such.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Breaking into Spring!</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 4/07/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Hope the weather gets a bit nicer...</p>
+
+                                <p>Y'know, with more sunlight.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="tldate">2000</div>
+                    </li>
+
+                    <li>
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>New Apple Device Release Date</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 3/22/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>In memory of Steve Jobs.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>No icon here</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 3/16/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Here you'll find some beautiful photography for your viewing pleasure, courtesy of
+                                    <a href="http://lorempixel.com/">lorempixel</a>.</p>
+
+                                <p>
+                                    <img src="http://lorempixel.com/600/300/nightlife/" alt="lorem pixel">
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Some Important Date!</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 3/03/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Write up a quick summary of the event.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-panel noarrow">
+                            <div class="tl-heading">
+                                <h4>Secondary Timeline Box</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 3/01/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>This might be a follow-up post with related info. Maybe we include some extra links, tweets,
+                                    user comments, photos, etc.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tldate">2018</div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>The Winter Months</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 02/23/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Gee time really flies when you're having fun.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tl-circ"></div>
+                        <div class="timeline-panel">
+                            <div class="tl-heading">
+                                <h4>Yeah we're pretty much done here</h4>
+                                <p>
+                                    <small class="text-muted">
+                                        <i class="glyphicon glyphicon-time"></i> 02/11/2014</small>
+                                </p>
+                            </div>
+                            <div class="tl-body">
+                                <p>Wasn't this fun though?</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </ion-col>
+        </ion-col>
+    </ion-row>
+    <ion-row class=" address-row">
+        <ion-row col-md-12>
+            <ion-col class="address address-icons center-text" offset-md-3 col-md-6 offset-sm-3 col-sm-6>
+                <h1 class="center-text">Dadaya High School</h1>
+                <p> P. Bag 651</p>
+                <p>Zvishavane, Midlands ,Zimbabwe</p>
+                <p>
+                    <ion-icon name="call"></ion-icon> +263-771-361-566, +263-712-021-040</p>
+                <p>
+                    <ion-icon name="mail"></ion-icon>
+                    <a>info@dadayahigh.ac.zw</a>
+                </p>
+                <br>
+            </ion-col>
+            <ion-col class="address-icons center-text larger-icon" offset-md-3 col-md-6 offset-sm-3 col-sm-6>
+                <a>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+    <ion-row col-md-12 class="footer">
+        <ion-col offset-sm-1>Copyright © Dadaya High Shcool 2018</ion-col>
+        <ion-col offset-sm-5>Powered by DOSA</ion-col>
+    </ion-row>
 </ion-content>

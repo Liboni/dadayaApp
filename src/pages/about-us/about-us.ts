@@ -6,8 +6,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'about-us.html',
 })
 export class AboutUsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+  activeTab:String = "PRINCIPAL";
+  constructor(public navCtrl: NavController, public navParams: NavParams) {    
+  }
+  tab(name){
+    this.activeTab = name;
   }
 }
