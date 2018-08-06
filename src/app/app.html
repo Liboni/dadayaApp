@@ -17,7 +17,7 @@
 <nav class="col-sm-0 nav-bar">
         <img src="assets/imgs/logo.jpeg" class="nav-logo" (click)="homePage()"/>
   <ul class="nav-list">
-    <li class="nav-item" *ngFor="let p of pages" (click)="openPage(p)">
+    <li [class.active]="p.title == activePage" class="nav-item" *ngFor="let p of pages" (click)="openPage(p)">
        {{p.title}}
     </li>
   </ul>

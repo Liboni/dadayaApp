@@ -1,0 +1,22 @@
+page-news {
+    .segment-header {
+        ion-segment-button{          
+            color: #15c810 !important;
+        }    
+        .segment-activated{
+            border-color: #15c810!important;
+        }    
+    }   
+    .activity{
+        ion-item{           
+            border-bottom: 1px solid #dedede;
+            transition: all .2s ease-in-out;
+        }
+        ion-item:hover {
+            transform: scale(1.02);
+        }
+    }
+    .activity-active{
+        background-color: #dedede;
+    }
+}

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col offset-md-3 col-md-6>
+      <h1 class="center-text underline">News</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row col-md-12>
+    <ion-col offset-md-1 col-md-8>
+      <ion-row *ngIf="activeTab=='1'">
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/buildings/church.jpg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="activeTab=='2'">
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/buildings/todd.jpeg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="activeTab=='3'">
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/buildings/poster.jpeg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+                Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-md-3>
+      <ion-card>
+        <ion-segment class="segment-header" [(ngModel)]="activities">
+          <ion-segment-button value="notices">
+            Notices
+          </ion-segment-button>
+          <ion-segment-button value="events">
+            Events
+          </ion-segment-button>
+        </ion-segment>
+        <div class="activity" [ngSwitch]="activities">
+          <ion-list *ngSwitchCase="'notices'">
+            <ion-item [class.activity-active]="activeTab=='1'" (click)="tab('1')">
+              <ion-thumbnail item-start>
+                  <img src="assets/imgs/buildings/church.jpg">
+              </ion-thumbnail>
+              <h3>Sciences subjects</h3>
+              <p> Mr Jema</p>
+            </ion-item>
+            <ion-item [class.activity-active]="activeTab=='2'" (click)="tab('2')">
+              <ion-thumbnail item-start>
+                <img src="/assets/imgs/church.jpg">
+              </ion-thumbnail>
+              <h3>Sciences subjects</h3>
+              <p> Mr Jema</p>
+            </ion-item>
+          </ion-list>
+          <ion-list *ngSwitchCase="'events'">
+            <ion-item [class.activity-active]="activeTab=='3'" (click)="tab('3')">
+              <ion-thumbnail item-start>
+                  <img src="assets/imgs/buildings/poster.jpeg">
+              </ion-thumbnail>
+              <h3>Sciences subjects</h3>
+              <p> Mr Jema</p>
+            </ion-item>
+            <ion-item>
+              <ion-thumbnail item-start>
+                  <img src="assets/imgs/buildings/poster.jpeg">
+              </ion-thumbnail>
+              <h3>Sciences subjects</h3>
+              <p> Mr Jema</p>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

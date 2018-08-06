@@ -4,4 +4,36 @@ page-contact {
     background-repeat: no-repeat;
     background-size: cover;
    }
+   #map {
+    height: 500px;  
+    width: 100%; 
+    margin-top: 5em;
+   // background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   label, p{
+       font-size: 16px;
+       color: #343434;
+       font-weight: 400;
+       font-family: 'Open Sans', sans-serif;
+       em{
+           color: red;
+           font-weight: 700;
+           font-size: 20px;
+       }
+   }
+   input, textarea{
+    min-width: 380px;
+    border: 1px solid #cecece;
+    padding: 5px;
+   }
+   ion-row{
+    .button-md-secondary{
+        background-color: #15c810 !important;
+        padding: 20px;
+        color: #fff;
+       }
+   }
+   
 }

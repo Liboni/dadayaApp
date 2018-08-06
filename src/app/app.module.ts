@@ -15,11 +15,11 @@ import { ContactPage } from '../pages/contact/contact';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { GalleryPageModule } from '../pages/gallery/gallery.module';
 import { ProjectsPage } from '../pages/projects/projects';
-import { BlogPageModule } from '../pages/blog/blog.module';
 import { ProjectsPageModule } from '../pages/projects/projects.module';
-import { BlogPage } from '../pages/blog/blog';
 import { ServicesPage } from '../pages/services/services';
 import { ServicesPageModule } from '../pages/services/services.module';
+import { NewsPageModule } from '../pages/news/news.module';
+import { NewsPage } from '../pages/news/news';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { ServicesPageModule } from '../pages/services/services.module';
     AboutUsPageModule,
     ContactPageModule,
     GalleryPageModule,
-    BlogPageModule,
+    NewsPageModule,
     ProjectsPageModule,
     ServicesPageModule,
     IonicModule.forRoot(MyApp),
@@ -46,7 +46,7 @@ import { ServicesPageModule } from '../pages/services/services.module';
     ContactPage,
     GalleryPage,
     ProjectsPage,
-    BlogPage,
+    NewsPage,
     ServicesPage
   ],
   providers: [

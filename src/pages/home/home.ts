@@ -1,6 +1,7 @@
 import { Component ,ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
+import { ServicesPage } from '../services/services';
 
 @Component({
   selector: 'page-home',
@@ -17,5 +18,8 @@ export class HomePage {
     if(currentIndex==3){
       this.slides.stopAutoplay();
     }
+  }
+  servicePage(name){
+      this.navCtrl.push(ServicesPage,{data:name});
   }
 }
