@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col class="side-menu-list-col" col-md-3>
+      <ul class="side-menu-list">
+        <li [class.active]="activeTab=='PRINCIPAL'" (click)="tab('PRINCIPAL')">
+          <ion-row col-md-12>
+            <ion-col class="side-menu-list-col" offset-md-5>
+              <ion-icon name="stats"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row col-md-12>
+            <ion-col class="side-menu-list-col" offset-md-4>
+              DASHBOARD
+            </ion-col>
+          </ion-row>
+        </li>
+        <li [class.active]="activeTab=='STRATEGIC'" (click)="tab('STRATEGIC')">
+          <ion-row col-md-12>
+            <ion-col class="side-menu-list-col" offset-md-5>
+              <ion-icon name="alert"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row col-md-12>
+            <ion-col class="side-menu-list-col" offset-md-3>
+              UPLOAD EVENTS
+            </ion-col>
+          </ion-row>
+        </li>
+        <li [class.active]="activeTab=='BACKGROUND'" (click)="tab('BACKGROUND')">
+          <ion-row col-md-12>
+            <ion-col class="side-menu-list-col" offset-md-5>
+              <ion-icon name="notifications"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row col-md-12>
+            <ion-col class="side-menu-list-col" offset-md-3>
+              UPLOAD NOTICES
+            </ion-col>
+          </ion-row>
+        </li>
+      </ul>
+    </ion-col>
+    <ion-col class="side-menu-list-col" col-md-9>
+    </ion-col>
+  </ion-row>
+</ion-content>

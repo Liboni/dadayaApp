@@ -20,6 +20,10 @@ import { ServicesPage } from '../pages/services/services';
 import { ServicesPageModule } from '../pages/services/services.module';
 import { NewsPageModule } from '../pages/news/news.module';
 import { NewsPage } from '../pages/news/news';
+import { LoginPageModule } from '../pages/login/login.module';
+import { LoginPage } from '../pages/login/login';
+import { PortalPage } from '../pages/portal/portal';
+import { PortalPageModule } from '../pages/portal/portal.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { NewsPage } from '../pages/news/news';
     NewsPageModule,
     ProjectsPageModule,
     ServicesPageModule,
+    LoginPageModule,
+    PortalPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -47,6 +53,8 @@ import { NewsPage } from '../pages/news/news';
     GalleryPage,
     ProjectsPage,
     NewsPage,
+    LoginPage,
+    PortalPage,
     ServicesPage
   ],
   providers: [
