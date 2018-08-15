@@ -9,4 +9,30 @@ page-portal {
     .icon{
         font-size: 40px;
     }
+    .side-menu-list-col {
+         margin-right: 0;
+    }
+    label, p{
+        font-size: 16px;
+        color: #343434;
+        font-weight: 400;
+        font-family: 'Open Sans', sans-serif;
+        em{
+            color: red;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+    input, textarea{
+     min-width: 380px;
+     border: 1px solid #cecece;
+     padding: 5px;
+    }
+    ion-row{
+     .button-md-secondary{
+         background-color: #15c810 !important;
+         padding: 20px;
+         color: #fff;
+        }
+    }
 }

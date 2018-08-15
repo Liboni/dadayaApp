@@ -1,8 +1,8 @@
 page-about-us {
     .about-row{
         h2{
-            color: #c25b4e;
-            border-bottom: 1px solid #dedede;
+            color: #32db64;
+            border-bottom: 1px solid #F0F0E9;
         }
     }
      
@@ -13,11 +13,11 @@ page-about-us {
     }
     img { border: 0; max-width: 100%; }
 
-    .page-header h1 {
-    font-size: 3.26em;
-    text-align: center;
-    color: #efefef;
-    text-shadow: 1px 1px 0 #000;
+   .page-header h1 {
+        font-size: 3.26em;
+        text-align: center;
+        color: #efefef;
+        text-shadow: 1px 1px 0 #000;
     }
 
     /** timeline box structure **/
@@ -48,7 +48,7 @@ page-about-us {
     padding: 3px 0;
     font-weight: bold;
     text-align: center;
-    -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
+    box-shadow: 0 0 11px rgba(0,0,0,0.35);
     }
 
     .timeline li {
@@ -159,7 +159,7 @@ page-about-us {
 
     .tl-heading h4 {
     margin: 0;
-    color: #c25b4e;
+    color: #32db64;
     }
 
     .tl-body p, .tl-body ul {

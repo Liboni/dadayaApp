@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
-import { ServicesPage } from '../services/services';
-import { GalleryPage } from '../gallery/gallery';
 
 @IonicPage()
 @Component({
@@ -10,7 +7,10 @@ import { GalleryPage } from '../gallery/gallery';
   templateUrl: 'portal.html',
 })
 export class PortalPage {
-
+  activeTab: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+  tab(name) {
+    this.activeTab = name;
   }
 }
