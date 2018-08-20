@@ -22,6 +22,9 @@ import { NewsPageModule } from '../pages/news/news.module';
 import { NewsPage } from '../pages/news/news';
 import { LoginPageModule } from '../pages/login/login.module';
 import { LoginPage } from '../pages/login/login';
+import { TestgalleryPage } from '../pages/testgallery/testgallery';
+import { TestgalleryPageModule } from '../pages/testgallery/testgallery.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -38,12 +41,14 @@ import { LoginPage } from '../pages/login/login';
     ProjectsPageModule,
     ServicesPageModule,
     LoginPageModule,
-    IonicModule.forRoot(MyApp),
-  ],
+    TestgalleryPageModule,
+    ComponentsModule,
+    IonicModule.forRoot(MyApp)    
+  ], 
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    HomePage, 
     ListPage,
     AboutUsPage,
     ContactPage,
@@ -51,7 +56,8 @@ import { LoginPage } from '../pages/login/login';
     ProjectsPage,
     NewsPage,
     LoginPage,
-    ServicesPage
+    ServicesPage,
+    TestgalleryPage
   ],
   providers: [
     StatusBar,

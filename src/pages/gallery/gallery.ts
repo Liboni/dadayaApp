@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the GalleryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,11 +8,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GalleryPage {
   activeTab:String = "PREMISES";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private modal: ModalController) {
   }
-
   tab(name){
     this.activeTab = name;
   }
+  openModal(){
+    let profileModal = this.modal.create(Profile, { userId: 8675309 });
+    profileModal.present();
+  }
+}
+
+class Profile {
+
+ constructor(params: NavParams) {
+   console.log('UserId', params.get('userId'));
+ } 
 
 }
