@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { GalleryImagesComponent } from '../../components/gallery-images/gallery-images';
 
 @IonicPage()
 @Component({
@@ -14,15 +15,7 @@ export class GalleryPage {
     this.activeTab = name;
   }
   openModal(){
-    let profileModal = this.modal.create(Profile, { userId: 8675309 });
+    let profileModal = this.modal.create(GalleryImagesComponent);
     profileModal.present();
   }
-}
-
-class Profile {
-
- constructor(params: NavParams) {
-   console.log('UserId', params.get('userId'));
- } 
-
 }

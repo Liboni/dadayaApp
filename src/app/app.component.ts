@@ -11,7 +11,6 @@ import { ProjectsPage } from '../pages/projects/projects';
 import { ServicesPage } from '../pages/services/services';
 import { NewsPage } from '../pages/news/news';
 import { LoginPage } from '../pages/login/login';
-import { TestgalleryPage } from '../pages/testgallery/testgallery';
 
 @Component({
   templateUrl: 'app.html'
@@ -34,7 +33,6 @@ export class MyApp {
       { title: 'Projects', component: ProjectsPage },
       { title: 'News', component: NewsPage },
       { title: 'Contact', component: ContactPage },
-      { title: 'Test', component: TestgalleryPage },
       { title: 'Login', component: LoginPage }
     ];
   }

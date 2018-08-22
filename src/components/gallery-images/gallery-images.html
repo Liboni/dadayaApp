@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="main col-md-12">
+    <img [class.show-image]="step==1" src="assets/imgs/sample.jpg">
+    <img [class.show-image]="step==2" src="assets/imgs/buildings/teachers block.jpeg">
+    <img [class.show-image]="step==3" src="assets/imgs/buildings/computer science block.jpeg">
+    <img [class.show-image]="step==4" src="assets/imgs/buildings/dh front.jpeg">
+    <img [class.show-image]="step==5" src="assets/imgs/buildings/poster.jpeg">
+    <img [class.show-image]="step==6" src="assets/imgs/buildings/dh back.jpeg">
+    <img [class.show-image]="step==7" src="assets/imgs/buildings/classroom front.jpeg">
+    <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>
+    <ion-icon name="ios-arrow-forward" class="ion-icon-right" (click)="next()"></ion-icon>
+  </div>
+  <div class="thumbnail col-md-12">
+    <img [class.selected-thumbnail]="step==1" (click)="set(1)" src="assets/imgs/sample.jpg">
+    <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/teachers block.jpeg">
+    <img [class.selected-thumbnail]="step==3" (click)="set(3)" src="assets/imgs/buildings/computer science block.jpeg">
+    <img [class.selected-thumbnail]="step==4" (click)="set(4)" src="assets/imgs/buildings/dh front.jpeg">
+    <img [class.selected-thumbnail]="step==5" (click)="set(5)" src="assets/imgs/buildings/poster.jpeg">
+    <img [class.selected-thumbnail]="step==6" (click)="set(6)" src="assets/imgs/buildings/dh back.jpeg">
+    <img [class.selected-thumbnail]="step==7" (click)="set(7)" src="assets/imgs/buildings/classroom front.jpeg">
+  </div>
+</div>
