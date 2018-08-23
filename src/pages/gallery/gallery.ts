@@ -14,8 +14,8 @@ export class GalleryPage {
   tab(name){
     this.activeTab = name;
   }
-  openModal(){
-    let profileModal = this.modal.create(GalleryImagesComponent);
+  openModal(value){
+    let profileModal = this.modal.create(GalleryImagesComponent, { imageType: value });
     profileModal.present();
   }
 }

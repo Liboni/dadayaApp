@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavParams } from 'ionic-angular';
 @Component({
   selector: 'gallery-images',
   templateUrl: 'gallery-images.html'
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
 export class
   GalleryImagesComponent {
   step = 1;
-  constructor() { }
+  imageType:any;
+  constructor(params: NavParams) {    
+    this.imageType= params.get('imageType');
+    console.log(params.get('imageType'));
+  }
  
   next() {    
     if(this.step==7){
