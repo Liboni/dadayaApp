@@ -24,6 +24,9 @@
         <li [class.active]="activeTab=='LIFE'" (click)="tab('LIFE')">
           SCHOOL LIFE
         </li>
+        <li [class.active]="activeTab=='DOSA'" (click)="tab('DOSA')">
+         DOSA
+        </li>
       </ul>
     </ion-col>
     <ion-col col-md-8 *ngIf="activeTab=='PREMISES'">
@@ -31,12 +34,12 @@
         <ion-col col-md-4>
           <ion-card>
             <ion-item>
-              <h2>Administration block</h2>
+              <h2>Administration</h2>
               <p>August 5, 2018</p>
             </ion-item>
-            <img class="base-image" src="assets/imgs/buildings/todd.jpeg" (click)="openModal()" >
+            <img class="base-image" src="assets/imgs/buildings/todd.jpeg" (click)="openModal()">
             <ion-card-content>
-              <p>This is the iconic building at Dadaya high school.</p>
+              <p>This is the iconic building at Dadaya high school. Its the adminstration building.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -48,8 +51,7 @@
             </ion-item>
             <img class="base-image" src="assets/imgs/buildings/church.jpg" (click)="openModal()">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>This is the church building at school for the Church of Christ where students worship.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -61,73 +63,31 @@
             </ion-item>
             <img class="base-image" src="assets/imgs/buildings/classrooms.jpeg" (click)="openModal()">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>These are the classrooms, where students learn from form one to form six</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
           <ion-card>
             <ion-item>
-              <h2>Dinning hall (Back)</h2>
-              <p>August 5, 2018</p>
-            </ion-item>
-            <img class="base-image" src="assets/imgs/buildings/dh back.jpeg" (click)="openModal()">
-            <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-md-4>
-          <ion-card>
-            <ion-item>
-              <h2>Dinning hall (Front)</h2>
+              <h2>Dinning hall</h2>
               <p>August 5, 2018</p>
             </ion-item>
             <img class="base-image" src="assets/imgs/buildings/dh front.jpeg" (click)="openModal()">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>This is the dining hall where students get there meals.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
         <ion-col col-md-4>
           <ion-card>
             <ion-item>
-              <h2>Classrooms (Front)</h2>
-              <p>August 5, 2018</p>
-            </ion-item>
-            <img class="base-image" src="assets/imgs/buildings/classroom front.jpeg" (click)="openModal()">
-            <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-md-4>
-          <ion-card>
-            <ion-item>
-              <h2>Computer science block</h2>
+              <h2>Computer science</h2>
               <p>August 5, 2018</p>
             </ion-item>
             <img class="base-image" src="assets/imgs/buildings/computer science block.jpeg" (click)="openModal()">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-md-4>
-          <ion-card>
-            <ion-item>
-              <h2>Teachers Block</h2>
-              <p>August 5, 2018</p>
-            </ion-item>
-            <img class="base-image" src="assets/imgs/buildings/teachers block.jpeg" (click)="openModal()">
-            <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>This is the computer science laboratory for form one to form six.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -139,11 +99,72 @@
             </ion-item>
             <img class="base-image" src="assets/imgs/buildings/physics block.jpeg" (click)="openModal()">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>The physics labarotory for form one to form six.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <ion-item>
+              <h2>Chemistry Block</h2>
+              <p>August 5, 2018</p>
+            </ion-item>
+            <img class="base-image" src="assets/imgs/buildings/classroom front.jpeg" (click)="openModal()">
+            <ion-card-content>
+              <p>The chemistry labarotory for form one to form six.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <ion-item>
+              <h2>Girls Hostels</h2>
+              <p>August 5, 2018</p>
+            </ion-item>
+            <img class="base-image" src="assets/imgs/buildings/classroom front.jpeg" (click)="openModal()">
+            <ion-card-content>
+              <p>These are girls hostel for form one to six.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <ion-item>
+              <h2>Boys Hostels</h2>
+              <p>August 5, 2018</p>
+            </ion-item>
+            <img class="base-image" src="assets/imgs/buildings/dh back.jpeg" (click)="openModal()">
+            <ion-card-content>
+              <p>These are boys hostel for form one to six.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-md-4>
+          <ion-card>
+            <ion-item>
+              <h2>Teachers Houses</h2>
+              <p>August 5, 2018</p>
+            </ion-item>
+            <img class="base-image" src="assets/imgs/buildings/teachers block.jpeg" (click)="openModal()">
+            <ion-card-content>
+              <p>These are the houses where teachers live</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col col-md-4>
+          <ion-card>
+            <ion-item>
+              <h2>Main Gate</h2>
+              <p>August 5, 2018</p>
+            </ion-item>
+            <img class="base-image" src="assets/imgs/buildings/teachers block.jpeg" (click)="openModal()">
+            <ion-card-content>
+              <p>This is the dadaya main entrance gate</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
         <ion-col col-md-4>
           <ion-card>
             <ion-item>
@@ -152,8 +173,7 @@
             </ion-item>
             <img class="base-image" src="assets/imgs/buildings/poster.jpeg" (click)="openModal()">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Dadaya direction poster to help navigate around the school.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -170,8 +190,8 @@
             </ion-item>
             <img src="assets/imgs/sample.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -183,8 +203,8 @@
             </ion-item>
             <img src="assets/imgs/sample.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -196,8 +216,8 @@
             </ion-item>
             <img src="assets/imgs/sample.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -214,8 +234,8 @@
             </ion-item>
             <img src="assets/imgs/sample.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -227,8 +247,8 @@
             </ion-item>
             <img src="assets/imgs/sample.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -240,8 +260,52 @@
             </ion-item>
             <img src="assets/imgs/sample.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+
+    <ion-col col-md-8 *ngIf="activeTab=='DOSA'">
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-item>
+              <h2>Marty McFly</h2>
+              <p>November 5, 1955</p>
+            </ion-item>
+            <img src="assets/imgs/sample.jpg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-item>
+              <h2>Marty McFly</h2>
+              <p>November 5, 1955</p>
+            </ion-item>
+            <img src="assets/imgs/sample.jpg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-item>
+              <h2>Marty McFly</h2>
+              <p>November 5, 1955</p>
+            </ion-item>
+            <img src="assets/imgs/sample.jpg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>

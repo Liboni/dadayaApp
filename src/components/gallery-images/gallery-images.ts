@@ -8,9 +8,7 @@ export class
   step = 1;
   constructor() { }
  
-  next() {
-    console.log(this.step);
-    
+  next() {    
     if(this.step==7){
       this.step=1;
       return;
