@@ -5,8 +5,6 @@
     </button>
   </ion-navbar>
 </ion-header>
-
-
 <ion-content padding>
   <ion-row>
     <ion-col offset-md-3 col-md-6>
@@ -37,9 +35,9 @@
           <ion-card>
             <img class="main-new-image" src="assets/imgs/life/12.jpg">
             <ion-card-content>
-                <h2 class="main-color">Visiting Dadaya</h2>
-                <h6>Friday August 31st, 2018 | Announcement</h6>
-                <br>
+              <h2 class="main-color">Visiting Dadaya</h2>
+              <h6>Friday August 31st, 2018 | Announcement</h6>
+              <br>
               <p>The visiting day is at the first Saturday of every month</p>
               <p><span class="bold">First Term 2018 :</span> Tuesday 9 January – Thursday 28 March</p>
               <br>
@@ -53,6 +51,16 @@
       <ion-row *ngIf="activeTab=='3'">
         <ion-col>
           <ion-card>
+            <img class="main-new-image" src="assets/imgs/shoolfees.jpg">
+            <ion-card-content>
+              <p>hird term fees should be paid in full before the openig of school on the 11th of September 2018 .Any queries...</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="activeTab=='4'">
+        <ion-col>
+          <ion-card>
             <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
             <ion-card-content>
               <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
@@ -61,39 +69,28 @@
           </ion-card>
         </ion-col>
       </ion-row>
-      <ion-row *ngIf="activeTab=='4'">
-          <ion-col>
-            <ion-card>
-              <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
-              <ion-card-content>
-                <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
-                  DeLorean?! Whoa. This is heavy.</p>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        <ion-row *ngIf="activeTab=='5'">
-            <ion-col>
-              <ion-card>
-                <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
-                <ion-card-content>
-                  <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
-                    DeLorean?! Whoa. This is heavy.</p>
-                </ion-card-content>
-              </ion-card>
-            </ion-col>
-          </ion-row>
-          <ion-row *ngIf="activeTab=='6'">
-              <ion-col>
-                <ion-card>
-                  <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
-                  <ion-card-content>
-                    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
-                      DeLorean?! Whoa. This is heavy.</p>
-                  </ion-card-content>
-                </ion-card>
-              </ion-col>
-            </ion-row>
+      <ion-row *ngIf="activeTab=='5'">
+        <ion-col>
+          <ion-card>
+            <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="activeTab=='6'">
+        <ion-col>
+          <ion-card>
+            <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+            <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
     </ion-col>
     <ion-col col-md-3>
       <ion-card>
@@ -124,7 +121,7 @@
             </ion-item>
             <ion-item [class.activity-active]="activeTab=='3'" (click)="tab('3')">
               <ion-thumbnail item-start>
-                <img src="/assets/imgs/church.jpg">
+                <img src="/assets/imgs/shoolfees.jpg">
               </ion-thumbnail>
               <h3>School Fees</h3>
               <p>Third term fees should be paid in full before the openig of school on the 11th of September 2018 .Any queries...</p>

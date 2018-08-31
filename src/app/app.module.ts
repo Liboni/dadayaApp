@@ -20,8 +20,6 @@ import { ServicesPage } from '../pages/services/services';
 import { ServicesPageModule } from '../pages/services/services.module';
 import { NewsPageModule } from '../pages/news/news.module';
 import { NewsPage } from '../pages/news/news';
-import { LoginPageModule } from '../pages/login/login.module';
-import { LoginPage } from '../pages/login/login';
 import { ComponentsModule } from '../components/components.module';
 import { GalleryImagesComponent } from '../components/gallery-images/gallery-images';
 
@@ -39,7 +37,6 @@ import { GalleryImagesComponent } from '../components/gallery-images/gallery-ima
     NewsPageModule,
     ProjectsPageModule,
     ServicesPageModule,
-    LoginPageModule,
     ComponentsModule,    
     IonicModule.forRoot(MyApp)    
   ], 
@@ -53,7 +50,6 @@ import { GalleryImagesComponent } from '../components/gallery-images/gallery-ima
     GalleryPage,
     ProjectsPage,
     NewsPage,
-    LoginPage,
     ServicesPage,
     GalleryImagesComponent
   ],

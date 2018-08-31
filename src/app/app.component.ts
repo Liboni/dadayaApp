@@ -10,7 +10,6 @@ import { GalleryPage } from '../pages/gallery/gallery';
 import { ProjectsPage } from '../pages/projects/projects';
 import { ServicesPage } from '../pages/services/services';
 import { NewsPage } from '../pages/news/news';
-import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
