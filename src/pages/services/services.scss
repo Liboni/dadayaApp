@@ -1,8 +1,13 @@
 page-services {
     .top-image{
-        background-image: url(/assets/imgs/buildings/church.jpg);
+        background-image: url(/assets/imgs/life/0.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    ion-card{
+        img{
+            height: 200px;
+        }
     }
     .academics-details{
         margin-top: 2em;

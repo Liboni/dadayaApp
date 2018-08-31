@@ -18,10 +18,16 @@
       <ion-row *ngIf="activeTab=='1'">
         <ion-col>
           <ion-card>
-            <img src="assets/imgs/buildings/church.jpg">
+            <img class="main-new-image" src="assets/imgs/buildings/admin1.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <h2 class="main-color">Term Dates 2018</h2>
+              <h6>Friday August 31st, 2018 | Announcement</h6>
+              <br>
+              <p><span class="bold">First Term 2018 :</span> Tuesday 9 January – Thursday 28 March</p>
+              <br>
+              <p><span class="bold">Second Term 2018 :</span> Tuesday 8 May – Thursday 26 July</p>
+              <br>
+              <p><span class="bold">Third Term 2018:</span> Tuesday 11 Sept – Thursday 6 Dec</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -29,10 +35,17 @@
       <ion-row *ngIf="activeTab=='2'">
         <ion-col>
           <ion-card>
-            <img src="assets/imgs/buildings/todd.jpeg">
+            <img class="main-new-image" src="assets/imgs/life/12.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+                <h2 class="main-color">Visiting Dadaya</h2>
+                <h6>Friday August 31st, 2018 | Announcement</h6>
+                <br>
+              <p>The visiting day is at the first Saturday of every month</p>
+              <p><span class="bold">First Term 2018 :</span> Tuesday 9 January – Thursday 28 March</p>
+              <br>
+              <p><span class="bold">Second Term 2018 :</span> Tuesday 8 May – Thursday 26 July</p>
+              <br>
+              <p><span class="bold">Third Term 2018:</span> Tuesday 11 Sept – Thursday 6 Dec</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -40,14 +53,47 @@
       <ion-row *ngIf="activeTab=='3'">
         <ion-col>
           <ion-card>
-            <img src="assets/imgs/buildings/poster.jpeg">
+            <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
-                Whoa. This is heavy.</p>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                DeLorean?! Whoa. This is heavy.</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
+      <ion-row *ngIf="activeTab=='4'">
+          <ion-col>
+            <ion-card>
+              <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+              <ion-card-content>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                  DeLorean?! Whoa. This is heavy.</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="activeTab=='5'">
+            <ion-col>
+              <ion-card>
+                <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+                <ion-card-content>
+                  <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                    DeLorean?! Whoa. This is heavy.</p>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row *ngIf="activeTab=='6'">
+              <ion-col>
+                <ion-card>
+                  <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+                  <ion-card-content>
+                    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
+                      DeLorean?! Whoa. This is heavy.</p>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+            </ion-row>
     </ion-col>
     <ion-col col-md-3>
       <ion-card>
@@ -63,33 +109,48 @@
           <ion-list *ngSwitchCase="'notices'">
             <ion-item [class.activity-active]="activeTab=='1'" (click)="tab('1')">
               <ion-thumbnail item-start>
-                  <img src="assets/imgs/buildings/church.jpg">
+                <img src="assets/imgs/buildings/church.jpg">
               </ion-thumbnail>
-              <h3>Sciences subjects</h3>
-              <p> Mr Jema</p>
+              <h3>Third Term 2018</h3>
+              <p>School opening and closing dates is at Tuesday, September 11, 2018 - 10:15 to Thursday, December 6, 2018
+                - 10:15...</p>
             </ion-item>
             <ion-item [class.activity-active]="activeTab=='2'" (click)="tab('2')">
               <ion-thumbnail item-start>
+                <img src="/assets/imgs/life/12.jpg">
+              </ion-thumbnail>
+              <h3>Visiting Days</h3>
+              <p>The visiting day is at the first Saturday of every month...</p>
+            </ion-item>
+            <ion-item [class.activity-active]="activeTab=='3'" (click)="tab('3')">
+              <ion-thumbnail item-start>
                 <img src="/assets/imgs/church.jpg">
               </ion-thumbnail>
-              <h3>Sciences subjects</h3>
-              <p> Mr Jema</p>
+              <h3>School Fees</h3>
+              <p>Third term fees should be paid in full before the openig of school on the 11th of September 2018 .Any queries...</p>
+            </ion-item>
+            <ion-item [class.activity-active]="activeTab=='4'" (click)="tab('4')">
+              <ion-thumbnail item-start>
+                <img src="/assets/imgs/church.jpg">
+              </ion-thumbnail>
+              <h3>School Rules And Regulations</h3>
+              <p>A complete, correct and clean uniform is required each day...</p>
             </ion-item>
           </ion-list>
           <ion-list *ngSwitchCase="'events'">
-            <ion-item [class.activity-active]="activeTab=='3'" (click)="tab('3')">
+            <ion-item [class.activity-active]="activeTab=='5'" (click)="tab('5')">
               <ion-thumbnail item-start>
-                  <img src="assets/imgs/buildings/poster.jpeg">
+                <img src="assets/imgs/buildings/poster.jpeg">
               </ion-thumbnail>
-              <h3>Sciences subjects</h3>
-              <p> Mr Jema</p>
+              <h3>Zimsec November Examination</h3>
+              <p>Zimsec examination timetable</p>
             </ion-item>
-            <ion-item>
+            <ion-item [class.activity-active]="activeTab=='6'" (click)="tab('6')">
               <ion-thumbnail item-start>
-                  <img src="assets/imgs/buildings/poster.jpeg">
+                <img src="assets/imgs/buildings/poster.jpeg">
               </ion-thumbnail>
-              <h3>Sciences subjects</h3>
-              <p> Mr Jema</p>
+              <h3>Zimsec June Results</h3>
+              <p>Zimsec June results</p>
             </ion-item>
           </ion-list>
         </div>

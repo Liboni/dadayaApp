@@ -2,6 +2,7 @@ import { Component ,ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
 import { ServicesPage } from '../services/services';
+import { NewsPage } from '../news/news';
 
 @Component({
   selector: 'page-home',
@@ -21,5 +22,12 @@ export class HomePage {
   }
   servicePage(name){
       this.navCtrl.push(ServicesPage,{data:name});
+  }
+
+  event(value){
+    this.navCtrl.push(NewsPage,{data:'events',tab:String(value)});
+  }
+  notice(value){
+    this.navCtrl.push(NewsPage,{data:'notices',tab:String(value)});
   }
 }

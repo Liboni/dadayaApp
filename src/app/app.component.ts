@@ -32,8 +32,7 @@ export class MyApp {
       { title: 'Gallery', component: GalleryPage },
       { title: 'Projects', component: ProjectsPage },
       { title: 'News', component: NewsPage },
-      { title: 'Contact', component: ContactPage },
-      { title: 'Login', component: LoginPage }
+      { title: 'Contact', component: ContactPage }
     ];
   }
 

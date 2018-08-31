@@ -6,7 +6,13 @@ page-news {
         .segment-activated{
             border-color: #15c810!important;
         }    
-    }   
+    }  
+    .main-color{
+        color: #15c810 !important;
+    } 
+    .main-new-image{
+        height: 30em;
+    }
     .activity{
         ion-item{           
             border-bottom: 1px solid #dedede;
@@ -18,5 +24,8 @@ page-news {
     }
     .activity-active{
         background-color: #dedede;
+    }
+    .bold{
+        font-weight: 900;
     }
 }

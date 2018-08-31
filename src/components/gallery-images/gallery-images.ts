@@ -9,20 +9,19 @@ export class
   step = 1;
   imageType:any;
   constructor(params: NavParams) {    
-    this.imageType= params.get('imageType');
-    console.log(params.get('imageType'));
+    this.imageType = params.get('imageType');   
   }
  
-  next() {    
-    if(this.step==7){
+  next(max) {    
+    if(this.step==max){
       this.step=1;
       return;
     }
     this.step++;
   }
-  prev() {
+  prev(max) {
     if(this.step==1){
-      this.step=7;
+      this.step=max;
       return;
     }
     this.step--;   
