@@ -8,11 +8,11 @@
 <ion-content padding>
   <ion-row>
     <ion-col offset-md-3 col-md-6>
-      <h1 class="center-text underline">News</h1>
+      <h1 class="center-text underline lower">News</h1>
     </ion-col>
   </ion-row>
   <ion-row col-md-12>
-    <ion-col offset-md-1 col-md-8>
+    <ion-col class="main-tab-news"ffset-md-1 col-md-8>
       <ion-row *ngIf="activeTab=='1'">
         <ion-col>
           <ion-card>
@@ -61,10 +61,9 @@
       <ion-row *ngIf="activeTab=='4'">
         <ion-col>
           <ion-card>
-            <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+            <img class="main-new-image" src="assets/imgs/regulations.jpg">
             <ion-card-content>
-              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
-                DeLorean?! Whoa. This is heavy.</p>
+              <p>A complete, correct and clean uniform is required each day...</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
@@ -72,7 +71,7 @@
       <ion-row *ngIf="activeTab=='5'">
         <ion-col>
           <ion-card>
-            <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+            <img class="main-new-image" src="assets/imgs/zimsec-logo.jpg">
             <ion-card-content>
               <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
                 DeLorean?! Whoa. This is heavy.</p>
@@ -83,7 +82,7 @@
       <ion-row *ngIf="activeTab=='6'">
         <ion-col>
           <ion-card>
-            <img class="main-new-image" src="assets/imgs/buildings/poster.jpeg">
+            <img class="main-new-image" src="assets/imgs/zimsec.jpg">
             <ion-card-content>
               <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
                 DeLorean?! Whoa. This is heavy.</p>
@@ -92,7 +91,7 @@
         </ion-col>
       </ion-row>
     </ion-col>
-    <ion-col col-md-3>
+    <ion-col class="side-tab-news" col-md-3>
       <ion-card>
         <ion-segment class="segment-header" [(ngModel)]="activities">
           <ion-segment-button value="notices">
@@ -104,7 +103,7 @@
         </ion-segment>
         <div class="activity" [ngSwitch]="activities">
           <ion-list *ngSwitchCase="'notices'">
-            <ion-item [class.activity-active]="activeTab=='1'" (click)="tab('1')">
+            <ion-item text-wrap [class.activity-active]="activeTab=='1'" (click)="tab('1')">
               <ion-thumbnail item-start>
                 <img src="assets/imgs/buildings/church.jpg">
               </ion-thumbnail>
@@ -112,39 +111,39 @@
               <p>School opening and closing dates is at Tuesday, September 11, 2018 - 10:15 to Thursday, December 6, 2018
                 - 10:15...</p>
             </ion-item>
-            <ion-item [class.activity-active]="activeTab=='2'" (click)="tab('2')">
+            <ion-item text-wrap [class.activity-active]="activeTab=='2'" (click)="tab('2')">
               <ion-thumbnail item-start>
                 <img src="/assets/imgs/life/12.jpg">
               </ion-thumbnail>
               <h3>Visiting Days</h3>
               <p>The visiting day is at the first Saturday of every month...</p>
             </ion-item>
-            <ion-item [class.activity-active]="activeTab=='3'" (click)="tab('3')">
+            <ion-item text-wrap [class.activity-active]="activeTab=='3'" (click)="tab('3')">
               <ion-thumbnail item-start>
                 <img src="/assets/imgs/shoolfees.jpg">
               </ion-thumbnail>
               <h3>School Fees</h3>
               <p>Third term fees should be paid in full before the openig of school on the 11th of September 2018 .Any queries...</p>
             </ion-item>
-            <ion-item [class.activity-active]="activeTab=='4'" (click)="tab('4')">
+            <ion-item text-wrap [class.activity-active]="activeTab=='4'" (click)="tab('4')">
               <ion-thumbnail item-start>
-                <img src="/assets/imgs/church.jpg">
+                <img src="/assets/imgs/regulations.jpg">
               </ion-thumbnail>
               <h3>School Rules And Regulations</h3>
               <p>A complete, correct and clean uniform is required each day...</p>
             </ion-item>
           </ion-list>
           <ion-list *ngSwitchCase="'events'">
-            <ion-item [class.activity-active]="activeTab=='5'" (click)="tab('5')">
+            <ion-item text-wrap [class.activity-active]="activeTab=='5'" (click)="tab('5')">
               <ion-thumbnail item-start>
-                <img src="assets/imgs/buildings/poster.jpeg">
+                <img src="assets/imgs/zimsec-logo.jpg">
               </ion-thumbnail>
               <h3>Zimsec November Examination</h3>
               <p>Zimsec examination timetable</p>
             </ion-item>
-            <ion-item [class.activity-active]="activeTab=='6'" (click)="tab('6')">
+            <ion-item wrap-text [class.activity-active]="activeTab=='6'" (click)="tab('6')">
               <ion-thumbnail item-start>
-                <img src="assets/imgs/buildings/poster.jpeg">
+                <img src="assets/imgs/zimsec.jpg">
               </ion-thumbnail>
               <h3>Zimsec June Results</h3>
               <p>Zimsec June results</p>

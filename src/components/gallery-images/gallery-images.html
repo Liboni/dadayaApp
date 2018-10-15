@@ -1,5 +1,6 @@
 <div *ngIf="imageType=='todd'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/admin1.jpg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/admin2.jpg">
     <img [class.show-image]="step==3" src="assets/imgs/buildings/admin3.jpg">
@@ -21,8 +22,9 @@
   </div>
 </div>
 
-<div *ngIf="imageType=='church'" class="container">
-  <div class="main col-md-12">
+<div *ngIf="imageType=='church'" class="container">  
+  <div class="main col-md-12">  
+      <button (click)="close()"class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/church.jpg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/church2.jpg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev(2)"></ion-icon>
@@ -31,10 +33,12 @@
   <div class="thumbnail col-md-12">
     <img [class.selected-thumbnail]="step==1" (click)="set(1)" src="assets/imgs/buildings/church.jpg">
     <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/church2.jpg">
+  </div>
 </div>
 
 <div *ngIf="imageType == 'classrooms'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev(2)"></ion-icon>
@@ -48,6 +52,7 @@
 
 <div *ngIf="imageType=='dh'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev(2)"></ion-icon>
@@ -59,9 +64,9 @@
   </div>
 </div>
 
-
 <div *ngIf="imageType=='computer'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>
@@ -72,10 +77,10 @@
     <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/classrooms1.jpeg">
   </div>
 </div>
-
 
 <div *ngIf="imageType=='physics'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>
@@ -87,9 +92,9 @@
   </div>
 </div>
 
-
 <div *ngIf="imageType=='chemistry'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/chemistry1.jpg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/chemistry2.jpg">
     <img [class.show-image]="step==3" src="assets/imgs/buildings/chemistry3.jpg">
@@ -99,17 +104,17 @@
     <ion-icon name="ios-arrow-forward" class="ion-icon-right" (click)="next()"></ion-icon>
   </div>
   <div class="thumbnail col-md-12">
-    <img [class.selected-thumbnail]="step==1" (click)="set(1)" src="assets/imgs/buildings/classrooms1.jpeg">
-    <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/classrooms2.jpeg">
-    <img [class.selected-thumbnail]="step==3" (click)="set(3)" src="assets/imgs/buildings/classrooms3.jpeg">
-    <img [class.selected-thumbnail]="step==4" (click)="set(4)" src="assets/imgs/buildings/classrooms4.jpeg">
-    <img [class.selected-thumbnail]="step==5" (click)="set(5)" src="assets/imgs/buildings/classrooms5.jpeg">
+    <img [class.selected-thumbnail]="step==1" (click)="set(1)" src="assets/imgs/buildings/chemistry1.jpg">
+    <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/chemistry2.jpg">
+    <img [class.selected-thumbnail]="step==3" (click)="set(3)" src="assets/imgs/buildings/chemistry3.jpg">
+    <img [class.selected-thumbnail]="step==4" (click)="set(4)" src="assets/imgs/buildings/chemistry4.jpg">
+    <img [class.selected-thumbnail]="step==5" (click)="set(5)" src="assets/imgs/buildings/chemistry5.jpg">
   </div>
 </div>
-
 
 <div *ngIf="imageType=='girls'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>
@@ -120,10 +125,10 @@
     <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/classrooms1.jpeg">
   </div>
 </div>
-
 
 <div *ngIf="imageType=='boys'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>
@@ -135,14 +140,14 @@
   </div>
 </div>
 
-
 <div *ngIf="imageType == 'teachers'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/teachershouse1.jpg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/teachershouse2.jpg">
     <img [class.show-image]="step==3" src="assets/imgs/buildings/teachershouse3.jpg">
     <img [class.show-image]="step==4" src="assets/imgs/buildings/teachershouse4.jpg">
-    <img [class.show-image]="step==5" src="assets/imgs/buildings/teachershouse5.jpg">
+    <img [class.show-image]="step==5" src="assets/imgs/buildings/teachershouse15.jpg">
     <img [class.show-image]="step==6" src="assets/imgs/buildings/teachershouse6.jpg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev(6)"></ion-icon>
     <ion-icon name="ios-arrow-forward" class="ion-icon-right" (click)="next(6)"></ion-icon>
@@ -152,14 +157,14 @@
     <img [class.selected-thumbnail]="step==2" (click)="set(2)" src="assets/imgs/buildings/teachershouse2.jpg">
     <img [class.selected-thumbnail]="step==3" (click)="set(3)" src="assets/imgs/buildings/teachershouse3.jpg">
     <img [class.selected-thumbnail]="step==4" (click)="set(4)" src="assets/imgs/buildings/teachershouse4.jpg">
-    <img [class.selected-thumbnail]="step==5" (click)="set(5)" src="assets/imgs/buildings/teachershouse5.jpg">
+    <img [class.selected-thumbnail]="step==5" (click)="set(5)" src="assets/imgs/buildings/teachershouse15.jpg">
     <img [class.selected-thumbnail]="step==6" (click)="set(6)" src="assets/imgs/buildings/teachershouse6.jpg">
   </div>
 </div>
 
-
 <div *ngIf="imageType=='gate'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>
@@ -173,6 +178,7 @@
 
 <div *ngIf="imageType=='poster'" class="container">
   <div class="main col-md-12">
+    <button (click)="close()" class="close">X</button>
     <img [class.show-image]="step==1" src="assets/imgs/buildings/classrooms.jpeg">
     <img [class.show-image]="step==2" src="assets/imgs/buildings/classrooms1.jpeg">
     <ion-icon name="ios-arrow-back" class="ion-icon-left" (click)="prev()"></ion-icon>

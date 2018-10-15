@@ -1,5 +1,10 @@
 gallery-images {
-  
+    .close{
+        float: right;
+        color: red;
+        background-color: #ffffff;
+        border-radius: 50%;
+        }
     .container, img{
         height: 100%;
         width: 100%;
@@ -12,10 +17,10 @@ gallery-images {
     }
     .thumbnail{
         background-color: #000d00;
-        height: 20%;
+        height: 19%;
         width: 100%;
         display: flex;
-        overflow: scroll;  
+        overflow: scroll;        
 
         &::-webkit-scrollbar-track {
 			border: 1px solid #000d00;
@@ -38,7 +43,7 @@ gallery-images {
             border: 1px solid #dedede;
             border-radius: 4px;
             padding: 5px;
-            width: 80px;
+            width: 90px;
             display: inline-block;
             height: 80px;
             margin-right: 10px;

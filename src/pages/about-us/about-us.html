@@ -8,11 +8,11 @@
 <ion-content padding>
     <ion-row class="top-row top-image">
         <div class="layer">
-            <h1 class="center-text main-heading">ABOUT US</h1>
+            <h1 class="center-text main-heading lower">ABOUT US</h1>
         </div>
     </ion-row>
     <ion-row>
-        <ion-col class="side-menu-list-col" offset-md-1 col-md-2>
+        <ion-col class="side-menu-list-col side-tab-news" offset-md-1 col-md-2>
             <ul class="side-menu-list">
                 <li [class.active]="activeTab=='PRINCIPAL'" (click)="tab('PRINCIPAL')">
                     PRINCIPAL MESSAGE
@@ -28,10 +28,10 @@
                 </li>
             </ul>
         </ion-col>
-        <about-us-principal-tab col-md-8 *ngIf="activeTab=='PRINCIPAL'"></about-us-principal-tab>
-        <about-us-strategic-tab col-md-8 *ngIf="activeTab=='STRATEGIC'"></about-us-strategic-tab>
-        <about-us-background-tab col-md-8 *ngIf="activeTab=='BACKGROUND'"></about-us-background-tab>
-        <about-us-staff-tab col-md-8 *ngIf="activeTab=='STAFF'"></about-us-staff-tab>
+        <about-us-principal-tab class="main-tab-news" col-md-8 *ngIf="activeTab=='PRINCIPAL'"></about-us-principal-tab>
+        <about-us-strategic-tab class="main-tab-news" col-md-8 *ngIf="activeTab=='STRATEGIC'"></about-us-strategic-tab>
+        <about-us-background-tab class="main-tab-news"col-md-8 *ngIf="activeTab=='BACKGROUND'"></about-us-background-tab>
+        <about-us-staff-tab class="main-tab-news" col-md-8 *ngIf="activeTab=='STAFF'"></about-us-staff-tab>
     </ion-row>
 <footer></footer>
 </ion-content>

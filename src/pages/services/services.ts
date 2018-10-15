@@ -10,7 +10,7 @@ export class ServicesPage {
   activeTab:String = "ACADEMICS";
   activeAcademicTab:String = "SCIENCES";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    if( navParams.get('data')!=null){
+     if( navParams.get('data')!=null){
       this.activeTab = navParams.get('data');
     }   
   }

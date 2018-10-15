@@ -4,7 +4,11 @@ page-gallery {
     }
     .base-image{
       height: 200px;
+      transition: all .2s ease-in-out;
     }
+    .base-image:hover {
+      transform: scale(1.02);
+     }
     .card-background-page {
 
         ion-card {
@@ -30,6 +34,17 @@ page-gallery {
         }
       
       }
-      
-      
+      @media only screen and (max-width: 575px) {
+        .side-menu-list-col{
+          margin-left: 0.33333%;
+          margin-right: 0.63333%;
+          max-width: 97%;
+          width: 100%;
+          flex: 0 0 100%
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+       
+      }
 }

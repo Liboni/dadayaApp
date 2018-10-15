@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
+import { GalleryPage } from '../../pages/gallery/gallery';
 @Component({
   selector: 'gallery-images',
   templateUrl: 'gallery-images.html'
@@ -11,7 +12,9 @@ export class
   constructor(params: NavParams) {    
     this.imageType = params.get('imageType');   
   }
- 
+ close(){
+    GalleryPage.profileModal.dismiss();
+ }
   next(max) {    
     if(this.step==max){
       this.step=1;
@@ -19,6 +22,7 @@ export class
     }
     this.step++;
   }
+
   prev(max) {
     if(this.step==1){
       this.step=max;
@@ -26,6 +30,7 @@ export class
     }
     this.step--;   
   }
+  
   set(value){    
     this.step=value;
   }

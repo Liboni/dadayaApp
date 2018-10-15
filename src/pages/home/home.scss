@@ -11,7 +11,13 @@ page-home {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        .layer{
+            p{
+                line-height: 30px;
+            }
+        }
        }
+
        .upcoming-events ion-thumbnail{
            background-color: #095407;
            color: white;
@@ -27,23 +33,12 @@ page-home {
         padding: 2em 0em 0em 1em;
       
        }
-       .address{
-        font-size: 20px;
-        h1{
-            padding: 0;
-        }
-       }
+      
        .upcoming-list{
            width: 100%
        }
              
-       .footer{
-           border-top:1px solid  #dedede;
-           padding: 1em;
-       }
-       .larger-icon{
-           font-size: 36px;
-       }
+         
        .upcoming-events:hover{
         ion-thumbnail{
             background-color: #084106;
@@ -89,8 +84,7 @@ page-home {
         margin-left: 0!important;
    }
   .activity{
-    color: #343434;
-    font-family: 'Montserrat', sans-serif;
+    color: #343434; 
     font-size: 14px;
     text-transform: uppercase;
     margin: 0 0 11px 0;
@@ -116,21 +110,35 @@ page-home {
     white-space: normal;
    }
    .item p{
-    font-size: 2rem;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;   
     margin-right: 5em;
     margin-left: 5em;
    }
+   .middle-image{
+    padding: 0 !important;
+   }
    @media only screen and (max-width: 1024px) {
+    .middle-image{
+       margin-bottom: 1em;
+    }
     .layer p{       
         margin-right: 5em;
         margin-left: 5em;       
     }
+    .layer p small {      
+        padding-top: 0em;
+    }
    }
    @media only screen and (max-width: 768px) {
+       .align-btn{
+           margin-left: 0;
+       }
     .layer p{       
         margin-right: 3em;
         margin-left: 3em;       
+    }
+    .layer p small {      
+        padding-top: 0em;
     }
    .process-row {
         padding-left: 0; 
@@ -152,9 +160,17 @@ page-home {
         display: block;
         padding: 1em;
     }
+    .middle-image{
+        padding: 0 !important;
+    }
+     .layer p small {      
+        padding-top: 0em;
+    }
    }
    @media only screen and (max-width: 550px) {
-    
+    .layer p small {      
+        padding-top: 0em;
+    }
     .item p{
         margin-right: 0em;
         margin-left: 0em;
@@ -165,6 +181,9 @@ page-home {
        }
     h1{
         margin-top: 1em !important;
+    }
+    .middle-image{
+        padding: 0 !important;
     }
     .process-row{
         padding-left: 0;

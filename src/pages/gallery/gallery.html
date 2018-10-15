@@ -9,10 +9,10 @@
 <ion-content padding class="card-background-page">
   <ion-row>
     <ion-col offset-md-3 col-md-6>
-      <h1 class="center-text underline">Gallery</h1>
+      <h1 class="center-text underline lower">Gallery</h1>
     </ion-col>
   </ion-row>
-  <ion-row>
+  <ion-row text-wrap>
     <ion-col class="side-menu-list-col" offset-md-1 col-md-2>
       <ul class="side-menu-list">
         <li [class.active]="activeTab=='PREMISES'" (click)="tab('PREMISES')">
@@ -36,8 +36,8 @@
             <ion-item>
               <h2>Administration</h2>
               <p>August 5, 2018</p>
-            </ion-item>
-            <img class="base-image" src="assets/imgs/dadayatodd.jpg" (click)="openModal('todd')">
+            </ion-item>         
+            <img class="base-image" src="assets/imgs/dadayatodd.jpg" (click)="openModal('todd')">           
             <ion-card-content>
               <p>This is the iconic building at Dadaya high school. Its the adminstration building.</p>
             </ion-card-content>
@@ -534,7 +534,7 @@
               <h2>DOSA</h2>
               <p>July, 2018</p>
             </ion-item>
-             <img class="base-image" src="assets/imgs/dosa/20.jpg">
+             <img class="base-image" src="assets/imgs/dosa/29.jpg">
             <ion-card-content>
               <p>DOSA 2018 reunion at Dadaya High School.</p>
             </ion-card-content>
