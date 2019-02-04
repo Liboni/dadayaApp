@@ -1,36 +1,8 @@
-  <ion-col offset-md-3 col-md-6>
-    <h1 class="center-text underline lower">Principal Message</h1>
-  </ion-col>
-  <ion-row class="padding-screen" col-md-12>
-    <p class="justify">
-      I’m so excited to lead a school that is a great community institution and a world-class high school in Midlands. I’ve already
-      heard from so many parents, students, ministers and community leaders about how excited they are – and we’re going
-      to tap into that excitement. We are creating a new Dyett High School, which will be an open enrollment, neighborhood
-      school that is arts focused and has a technology lab and training center. The school will open for the 2018-19 school
-      year and have 550 students when it is fully enrolled.
-      <br>
-      <br> The new school concept was celebrated by a broad coalition of community groups, clergy, and elected officials
-      representing Bronzeville and the larger south side community, and it will incorporate key themes identified by the
-      RFP process, such as a technology hub for the larger community, and the need for fine arts programming that are consistent
-      with the legacy of the school's namesake, Walter H. Dyett.
-      <br>
-      <br> CPS worked with multiple community partners to arrive at a solution that meets several needs: create an open enrollment
-      neighborhood high school, fill the critical demand for an arts high school on the south side, produce an enrollment
-      stream that can weather population changes, and work with education leaders to create a technology hub.
-      <br>
-      <br> With the Selective Enrollment process underway, you can expect to see us out in the community, talking to students
-      in the neighborhood, at the feeder schools and who have an interest in the arts.
-      <br>
-      <br>
-      <br>
-      <br> I also look forward to working with the leaders on our Technical Advisory Committees, who are recognized leaders
-      in their fields, so that that they can provide insight and guidance on what our needs will be.
-      <br>
-      <br> I will also be holding monthly community meetings so if you have questions or feedback, you can talk with me then,
-      or you can reach out separately and email me at bamcloyd@cps.edu.
-      <br>
-      <br> And in the coming months, I’ll be hiring staff for the school. I’ve already heard from a number of educators who
-      are excited and want to be a part of this school. I’ll be looking for teachers who are committed to rigor, taking our
-      students to the next level and passionate about engaging children.
-    </p>
-  </ion-row>
+<ion-col offset-md-3 col-md-6>
+  <h1 class="center-text underline lower">Principal Message</h1>
+</ion-col>
+<ion-row class="padding-screen" col-md-12 *ngFor="let item of items">
+  <p *ngIf="item.active" class="justify">
+    {{item.message}}
+  </p>
+</ion-row>

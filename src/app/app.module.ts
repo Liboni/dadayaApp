@@ -22,6 +22,9 @@ import { NewsPageModule } from '../pages/news/news.module';
 import { NewsPage } from '../pages/news/news';
 import { ComponentsModule } from '../components/components.module';
 import { GalleryImagesComponent } from '../components/gallery-images/gallery-images';
+import { ProvidersRequestHandlerProvider } from '../providers/providers-request-handler/providers-request-handler';
+import { ProvidersConfigProvider } from '../providers/providers-config/providers-config';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { GalleryImagesComponent } from '../components/gallery-images/gallery-ima
     NewsPageModule,
     ProjectsPageModule,
     ServicesPageModule,
-    ComponentsModule,    
+    ComponentsModule, 
+    HttpClientModule,   
     IonicModule.forRoot(MyApp)    
   ], 
   bootstrap: [IonicApp],
@@ -56,7 +60,9 @@ import { GalleryImagesComponent } from '../components/gallery-images/gallery-ima
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProvidersRequestHandlerProvider,
+    ProvidersConfigProvider
   ]
 })
 export class AppModule {}

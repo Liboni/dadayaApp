@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ProjectsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { ProvidersRequestHandlerProvider } from '../../providers/providers-request-handler/providers-request-handler';
+import { UrlPreffix } from '../../enums/url-preffix';
 @IonicPage()
 @Component({
   selector: 'page-projects',
@@ -15,11 +9,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProjectsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  items:any[]=[];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public request:ProvidersRequestHandlerProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProjectsPage');
+  this.request.getAll(UrlPreffix.Projects).then(result=>{
+     this.items=result;     
+     this.items.sort((a, b) => {
+      if(a.dateCreated < b.dateCreated) {
+        return 1;
+      } else if(a.dateCreated > b.dateCreated) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });  
+  }).catch((err)=>console.log(err))
   }
 
 }

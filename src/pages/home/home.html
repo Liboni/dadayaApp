@@ -20,7 +20,8 @@
     </ion-col>
     <ion-item>
       <p class="center-text">
-        Welcome to the 2017-2018 academic school year at Dadaya High School where we believe in our students, Dadaya's P.R.I.D.E
+        Welcome to the 2017-2018 academic school year at Dadaya High School where we believe in our students, Dadaya's
+        P.R.I.D.E
         and Joy.</p>
       <br>
     </ion-item>
@@ -34,7 +35,8 @@
           </ion-col>
           <ion-col col-md-12>
             <h3>Academic</h3>
-            <p>Academic success is important because working people will need higher levels of education to tackle the technologically
+            <p>Academic success is important because working people will need higher levels of education to tackle the
+              technologically
               demanding occupations of the future. ... </p>
           </ion-col>
           <ion-col class="align-btn" offset-md-3 col-md-6 offset-sm-3 col-sm-6>
@@ -49,11 +51,12 @@
           </ion-col>
           <ion-col col-md-12>
             <h3>Sports</h3>
-            <p>Sport develops a sense of friendliness among the children and develop their team spirit. It helps children to
+            <p>Sport develops a sense of friendliness among the children and develop their team spirit. It helps
+              children to
               develop mental and physical toughness... </p>
           </ion-col>
           <ion-col class="align-btn" offset-md-3 col-md-6 offset-sm-3 col-sm-6>
-            <button ion-button color="secondary"  (click)="servicePage('SPORTS')">Read More</button>
+            <button ion-button color="secondary" (click)="servicePage('SPORTS')">Read More</button>
           </ion-col>
         </ion-row>
       </ion-col>
@@ -64,11 +67,12 @@
           </ion-col>
           <ion-col col-md-12>
             <h3>Clubs & Culture</h3>
-            <p>Positive school cultures provide a safe, supportive, encouraging, inviting, and challenging environment for students
+            <p>Positive school cultures provide a safe, supportive, encouraging, inviting, and challenging environment
+              for students
               and staff...</p>
           </ion-col>
           <ion-col class="align-btn" offset-md-3 col-md-6 offset-sm-3 col-sm-6>
-            <button ion-button color="secondary"  (click)="servicePage('CULTURE')">Read More</button>
+            <button ion-button color="secondary" (click)="servicePage('CULTURE')">Read More</button>
           </ion-col>
         </ion-row>
       </ion-col>
@@ -81,36 +85,15 @@
       <h1 class="underline lower">School Notices</h1>
       <ion-row>
         <ion-list class="school-notice">
-          <ion-item>
-            <h3 class="activity">30 August 2018</h3>
-            <h2>Third Term 2018</h2>
-            <p class="activity-p">School opening and closing dates is at Tuesday, September 11, 2018 - 10:15 to Thursday, 
-              December 6, 2018 - 10:15...
-              <a (click)="notice(1)">SEE DETAILS</a>
-            </p>
-          </ion-item>
-          <ion-item>
-            <h3 class="activity">30 August 2018</h3>
-            <h2>Visiting Days</h2>
-            <p class="activity-p">The visiting day is at the first Saturday of every month...
-              <a (click)="notice(2)">SEE DETAILS</a>
-            </p>
-          </ion-item>
-          <ion-item>
-            <h3 class="activity">30 August 2018</h3>
-            <h2>School Fees</h2>
-            <p class="activity-p">Third term fees should be paid in full before the openig of school on the 11th of September 2018
-              .Any queries...
-              <a (click)="notice(3)">SEE DETAILS</a>
-            </p>
-          </ion-item>
-          <ion-item>
-            <h3 class="activity">30 October 2018</h3>
-            <h2>School Rules And Regulations</h2>
-            <p class="activity-p">A complete, correct and clean uniform is required each day...
-              <a (click)="notice(4)">SEE DETAILS</a>
-            </p>
-          </ion-item>
+          <div *ngFor="let item of notices; let i = index">
+            <ion-item *ngIf="item.active && i<3">
+              <h3 class="activity">{{item.dateCreated}}</h3>
+              <h2>{{item.heading}}</h2>
+              <p class="activity-p">{{item.message}}
+                <a (click)="notice(item.id)">SEE DETAILS</a>
+              </p>
+            </ion-item>
+          </div>
         </ion-list>
       </ion-row>
     </ion-col>
@@ -118,28 +101,19 @@
       <h1 class="underline lower">Upcoming Events</h1>
       <ion-row col-md-12>
         <ion-list class="upcoming-list">
-          <ion-item class="upcoming-events" (click)="event(5)">
-            <ion-thumbnail col-md-3 item-start>
-              <ion-row>
-                <small> November</small>
-              </ion-row>
-              2018
-            </ion-thumbnail>
-            <div class="col-md-9 upcoming-events-text">
-              <h3>Zimsec Examination</h3>
-            </div>
-          </ion-item>
-          <ion-item class="col-md-6 upcoming-events" (click)="event(6)">
-            <ion-thumbnail col-md-3 item-start>
-              <ion-row>
-                <small>June</small>
-              </ion-row>
-              2018
-            </ion-thumbnail>
-            <div class="col-md-9 upcoming-events-text">
-              <h3>Zimsec June Results</h3>
-            </div>
-          </ion-item>   
+          <div *ngFor="let item of events; let i = index">
+            <ion-item *ngIf="item.active && i<3" class="upcoming-events" (click)="event(item.id)">
+              <ion-thumbnail col-md-3 item-start>
+                <ion-row>
+                  <small> {{item.from}}</small> - <small> {{item.to}}</small>
+                </ion-row>
+                
+              </ion-thumbnail>
+              <div class="col-md-9 upcoming-events-text">
+                <h3>{{item.heading}}</h3>
+              </div>
+            </ion-item>
+          </div>
         </ion-list>
       </ion-row>
     </ion-col>
@@ -147,7 +121,8 @@
   <ion-row class="middle-image">
     <div class="layer">
       <p>
-        The mission of Dadaya High School is to provide all students with dynamic learning opportunities in a nurturing environment,
+        The mission of Dadaya High School is to provide all students with dynamic learning opportunities in a nurturing
+        environment,
         inspiring life-long learning and the realization of full potential.
       </p>
       <p>
@@ -157,5 +132,5 @@
       </p>
     </div>
   </ion-row>
-  <footer></footer> 
+  <footer></footer>
 </ion-content>
